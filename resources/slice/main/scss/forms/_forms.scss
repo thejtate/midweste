@@ -1,0 +1,113 @@
+.form {
+
+  &.form-contact {
+    width: 970px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    .webform-component-textarea {
+      margin: 0;
+      @include clearfix();
+      position: relative;
+
+      label {
+        width: 116px;
+        padding-left: 16px;
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        font-size: 18px;
+        top: 0;
+      }
+      .form-textarea-wrapper {
+        width: 625px;
+        height: 245px;
+        margin: 0 0 30px 120px;
+
+        .form-textarea {
+          @include box-sizing(border-box);
+          padding: 10px;
+          border: none;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .description {
+        padding: 0px 0 0 120px;
+        margin: 0 auto;
+        width: 745px;
+        font-size: 18px;
+        color: #000;
+        float: left;
+      }
+    }
+
+    .form-wrapper {
+      padding: 0;
+      border: none;
+      margin: 0;
+      @include clearfix(clearfix);
+
+      .form-item {
+        float: left;
+        width: 235px;
+        text-align: right;
+        margin: 0 0 30px 154px;
+
+        &:first-child {
+          margin: 0 0 30px 120px;
+        }
+
+        &.webform-component-textfield, &.webform-component-email, &.webform-component-selectfield {
+          position: relative;
+
+          .form-text {
+            font-size: 18px;
+            @include box-sizing(border-box);
+            padding: 5px 7px;
+            border: none;
+            width: 100%;
+          }
+
+          .form-select {
+            font-size: 18px;
+            @include box-sizing(border-box);
+            padding: 5px 7px;
+            border: none;
+            width: 100%;
+          }
+
+          &.state {
+            width: 68px;
+          }
+
+          &.small {
+            width: 121px;
+            margin: 0px 0 30px 45px;
+
+            label {
+              width: 37px;
+              left: -40px;
+            }
+          }
+
+          label {
+            display: inline-block;
+            font-size: 18px;
+            text-align: right;
+            position: absolute;
+            left: -120px;
+            top: 3px;
+            width: 115px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.webform-container-inline div, .webform-container-inline div.form-item{
+  display: block;
+}

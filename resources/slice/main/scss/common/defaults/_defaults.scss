@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  word-wrap: break-word;
+  font-family: $regular;
+
+  &.page-ourequipment {
+    background: #e4e3e3;
+  }
+
+  &.common-page {
+
+    .region-content{
+      padding: 20px 40px;
+    }
+  }
+}
+
+*, :after, :before {
+  @include box-sizing(border-box);
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: normal;
+}
+
+img[style*="right"] {
+  margin: 0 0 10px 20px;
+  clear: right;
+}
+
+img[style*="left"] {
+  margin: 0 20px 10px 0;
+  clear: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.group-main-content {
+  @include clearfix();
+
+  .field-name-field-recovery-image {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+}

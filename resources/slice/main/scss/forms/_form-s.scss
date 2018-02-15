@@ -1,0 +1,82 @@
+.form {
+  &.form-contact {
+    width: 100% !important;
+
+    .form-wrapper {
+
+      .form-item.webform-component-selectfield label {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: left;
+      }
+
+      .form-item.webform-component-email label {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: left;
+      }
+    }
+
+    .webform-component-textarea label {
+      position: relative;
+      display: block;
+      left: auto !important;
+      top: auto;
+    }
+
+    .webform-component-textarea .form-textarea-wrapper {
+      margin: 0 0 15px 0 !important;
+    }
+
+    .form-item.webform-component-textfield label {
+      display: block !important;
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      width: 100% !important;
+      text-align: left !important;
+    }
+
+    .form-item {
+      text-align: left !important;
+      margin: 0 0 15px 20px !important;
+      float: none !important;
+    }
+  }
+
+  .webform-component-textarea {
+
+    label {
+      width: 100% !important;
+      padding-left: 0 !important;
+      margin-bottom: 7px;
+    }
+
+    .form-textarea-wrapper {
+      width: 74% !important;
+    }
+
+    .description{
+      width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+.page .captcha {
+  padding: 20px 0 0 20px !important;
+
+  .form-item {
+    text-align: left !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+}
+
+.btn-wrap {
+  margin: 20px 10px !important;
+}

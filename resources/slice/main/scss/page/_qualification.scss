@@ -1,0 +1,77 @@
+&.page-qualification {
+
+  .content-wrapper {
+
+    .content-item {
+
+      &.odd {
+        @include box-sizing(border-box);
+        padding: 15px 0 60px 0;
+        background: image-url('bg/midle-bg-qualification.jpg') no-repeat;
+        background-size: cover;
+
+        h2 {
+          color: #a52235;
+          border-bottom: 1px solid #58585a;
+          padding: 10px 100px 10px 0;
+          margin: 0;
+          font-size: 30px;
+          display: inline-block;
+          font-family: $bold;
+        }
+
+        .cols {
+          @include clearfix(clearfix);
+
+          .col {
+            float: left;
+            width: 50%;
+
+            &.col1 {
+              padding-right: 50px;
+            }
+
+            &.col2 {
+              padding-left: 50px;
+            }
+
+            h3 {
+              font-size: 23px;
+              color: #000;
+              font-family: $bold;
+              margin: 20px 0;
+            }
+
+            p {
+              font-size: 18px;
+              margin: 0;
+            }
+
+            .logo-images {
+              padding: 20px 0;
+              margin-top: 20px;
+              border-top: 1px solid #000;
+
+              img {
+                display: block;
+                width: 210px;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+
+      &.even {
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  #block-system-main {
+    padding: 0 !important;
+  }
+}

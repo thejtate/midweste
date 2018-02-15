@@ -1,0 +1,21 @@
+.form {
+
+  &.form-contact {
+    width: $width-tablet - 28px;
+
+    .form-wrapper {
+
+      .form-item {
+        margin: 0 0 30px 125px;
+
+        &:first-child {
+          margin: 0 0 30px 100px;
+        }
+      }
+    }
+
+    .webform-component-textarea .form-textarea-wrapper {
+      width: 574px;
+    }
+  }
+}

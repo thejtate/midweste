@@ -1,0 +1,39 @@
+.page {
+  @import "home";
+  @import "about";
+  @import "qualification";
+  @import "contact";
+  @import "ourequipment";
+  @import "services";
+  @import "gallery/gallery";
+
+
+  .captcha {
+    padding: 20px 0 0 120px;
+
+    .funnel-reload-captcha{
+      color: #E36F6A;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 12px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    label{
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .form-item-captcha-response{
+      border: none;
+      font-size: 18px;
+      padding: 5px 7px;
+      margin: 0;
+    }
+  }
+}
+@import "user";

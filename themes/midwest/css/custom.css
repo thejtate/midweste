@@ -1,0 +1,62 @@
+/* Get your FREE Estimate Today link */
+.header-top .contacts a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Gallery */
+.page-gallery #block-system-main {
+  padding: 0;
+}
+
+.page-gallery .gallery-list .field-collection-view {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.page-gallery .field-collection-container {
+  margin: 0;
+  border-bottom: none;
+}
+
+.page-gallery .gallery-list .field-collection-view-links li a,
+.page-gallery .action-links-field-collection-add li a {
+  color: #333;
+  border-style: solid solid solid;
+  background-color: #DDD;
+  border-color: #BBB;
+  border-width: 1px;
+  height: auto;
+  display: block;
+  font-size: 11px;
+  margin-right: 0.5em;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.page-gallery .gallery-list ul.field-collection-view-links {
+  margin-top: 0;
+  margin-bottom: 20px;
+  float: right !important;
+}
+
+.page-gallery .gallery-list ul.field-collection-view-links li:first-child {
+  margin-bottom: 5px;
+}
+
+.page-gallery .gallery-list ul.field-collection-view-links li {
+  float: left;
+  margin-left: 5px;
+  border: none;
+}
+
+.page-gallery .action-links-field-collection-add {
+  list-style: none;
+}
+
+.page-gallery ul.field-collection-view-links li a {
+  padding: 2px 5px;
+  text-transform: uppercase;
+  margin-right: 0;
+}

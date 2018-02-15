@@ -1,0 +1,109 @@
+&.page-home {
+
+  .outer-wrapper {
+    .top-wrapper {
+      .img {
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .content-wrapper {
+    background: #f3f3f4;
+
+    .content-item {
+
+      &.odd {
+        width: 870px;
+        margin: 0 auto;
+
+        h2 {
+          font-size: 37px;
+          font-family: $italic;
+          text-align: center;
+          color: #a42234;
+          margin: 0;
+          padding-top: 20px;
+        }
+
+        p {
+          font-size: 26px;
+          color: #6d6e71;
+          text-align: center;
+          font-family: $lightitalic;
+          margin: 0;
+          padding: 0 0 20px 0;
+        }
+      }
+      &.even {
+
+        .category {
+
+          ul {
+            margin: 0;
+            padding: 0;
+            @include clearfix(clearfix);
+            position: relative;
+            border-bottom: 1px solid #ffffff;
+
+            &:before {
+              @include pseudo-block($top: 0, $left: 50%);
+              margin-left: -40px;
+              @include oneline-sprite-box($icons, lv-nav-top);
+              z-index: 101;
+            }
+
+            li {
+              float: left;
+              width: 25%;
+              list-style: none;
+              text-align: center;
+              background: image-url('bg/2lv-nav.jpg');
+
+              &:first-child {
+                a {
+                  border: none;
+                }
+              }
+
+              a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-family: $bold;
+                font-size: 23px;
+                height: 200px;
+                @include box-sizing(border-box);
+                padding: 50px;
+                background: rgba(0, 0, 0, 0.83);
+                position: relative;
+                @include transition(background .3s);
+                border-left: 1px solid rgba(255, 255, 255, 0.49);
+
+                &:hover {
+                  background: rgba(123, 8, 5, 0.85);
+                }
+
+                &:before {
+                  @include pseudo-block($top: 0, $left: 0);
+                  @include oneline-sprite-box($icons, icon-plus);
+                  top: 50%;
+                  left: 50%;
+                  margin-left: -25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #block-system-main {
+    padding: 0 !important;
+  }
+}

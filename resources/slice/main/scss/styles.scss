@@ -1,0 +1,80 @@
+@import "compass";
+//base styles
+@import "common/mixins";
+@import "common/fonts";
+@import "common/settings";
+@import "common/normalize";
+@import "common/helpers";
+@import "common/defaults/defaults";
+//forms
+@import "forms/forms";
+//layout
+@import "layout/header";
+@import "layout/wrappers";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/site-container";
+@import "layout/btn";
+//blocks
+//pages
+@import "page/page";
+//modules
+@import "modules/flexslider";
+@import "modules/formstyler";
+@import "modules/fancybox/fancybox";
+
+@media (max-width: $width-tablet - 1) {
+
+  .inner {
+    width: 100% !important;
+  }
+
+  @import "page/home-s";
+  @import "layout/footer-m";
+  @import "layout/header-s";
+  @import "page/qualification-m";
+  @import "page/about-m";
+  @import "forms/form-s";
+  @import "page/services-s";
+  @import "page/contact-s";
+  @import "page/ourequipment-s";
+  @import "common/defaults/defaults-s";
+  @import "page/gallery/gallery-s";
+
+  //module
+  @import "modules/fancybox/fancybox-s";
+  @import "modules/flexslider-s";
+}
+
+@media (min-width: $width-tablet) and (max-width: $width - 1) {
+
+  .inner {
+    width: 100% !important;
+  }
+
+  @import "page/home-m";
+  @import "layout/footer-m";
+  @import "layout/header-m";
+  @import "page/qualification-m";
+  @import "page/about-m";
+  @import "forms/form-m";
+  @import "page/contact-m";
+  @import "page/services-m";
+  @import "page/ourequipment-m";
+  @import "page/gallery/gallery-m";
+
+  //module
+  @import "modules/fancybox/fancybox-l";
+  @import "modules/flexslider-m";
+}
+
+@media (min-width: $width) {
+  @import "page/gallery/gallery-l";
+
+  //module
+  @import "modules/fancybox/fancybox-l";
+
+  .site-header .header-bottom .nav {
+    display: block !important;
+  }
+}

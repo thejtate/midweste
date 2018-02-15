@@ -1,0 +1,19 @@
+.btn-wrap {
+  display: inline-block;
+  margin: 20px 120px;
+
+  .form-submit {
+    font-size: 18px;
+    padding: 5px 70px;
+    @include background-image(linear-gradient(top, #deadb5 0%, #a52136 100%));
+    font-family: $bold;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    border: none;
+
+    &:hover {
+      @include background-image(linear-gradient(top, #a52136 0%, #deadb5 100%));
+    }
+  }
+}

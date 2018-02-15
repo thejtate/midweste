@@ -1,0 +1,24 @@
+.site-footer {
+  height: auto;
+
+  .cols .col{
+    float: none;
+    width: 100%;
+    text-align: center !important;
+    border-left: none;
+    padding: 0 !important;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .map{
+    img{
+      width: 100%;
+      height: auto !important;
+    }
+  }
+
+
+}

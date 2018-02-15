@@ -1,0 +1,28 @@
+name = Midwest
+description = Custom theme for Midwest.
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/custom.css
+
+scripts[] = js/lib/jquery.formstyler.min.js
+scripts[] = js/lib/jquery.flexslider.js
+scripts[] = js/lib/jquery.fancybox.js
+scripts[] = js/lib/jquery.fancybox.pack.js
+scripts[] = js/js.js
+scripts[] = js/custom.js
+
+regions[page_top] = Page top
+regions[header_top] = Header Top
+regions[header_bottom] = Header Bottom
+regions[middle_content] = Content Middle
+regions[content] = Content
+regions[help] = Help
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[footer_left] = Footer left
+regions[footer_right] = Footer right
+

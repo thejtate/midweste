@@ -1,0 +1,27 @@
+
+.fancybox-close {
+  top: 16px;
+  right: 16px;
+  @include oneline-sprite-box($icons, close);
+}
+
+.fancybox-prev span {
+  left: -45%;
+  @include oneline-sprite-box($icons, arrow-right);
+}
+
+.fancybox-next span {
+  right: -45%;
+  @include oneline-sprite-box($icons, arrow-right);
+}
+
+@media (max-width: 1495px) {
+
+  .fancybox-prev span {
+    left: 15px;
+  }
+
+  .fancybox-next span {
+    right: 15px;
+  }
+}

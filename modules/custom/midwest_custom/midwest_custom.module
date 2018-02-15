@@ -1,0 +1,105 @@
+<?php
+/**
+ * @file
+ * Custom site functionality
+ */
+
+define('CONTACT_WEBFORM', 8);
+define('CONTACT_EQUIP_WEBFORM', 9);
+
+module_load_include('inc', 'midwest_custom', 'includes/midwest_custom.form');
+
+/**
+ * Implements hook_menu().
+ */
+function midwest_custom_menu() {
+  $items['admin/midwest/config'] = array(
+    'title' => 'Midwest Configuration',
+    'description' => 'Midwest Configuration page',
+    //'position' => 'left',
+    //'weight' => -10,
+    'type' => MENU_NORMAL_ITEM,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('midwest_custom_site_setings_form'),
+    'access arguments' => array('administer content site configuration'),
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function midwest_custom_permission() {
+  return array(
+    'administer content site configuration' => array(
+      'title' => t('Administer main content variables'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function midwest_custom_menu_alter(&$items) {
+  global $user;
+
+  $items['user/register']['access callback'] = FALSE;
+  $items['user/password']['access callback'] = FALSE;
+  $item['user/reset/%/%/%']['access callback'] = FALSE;
+
+  if ($user->uid != 1) {
+    $item['node/%node/webform-results/analysis']['access callback'] = FALSE;
+    $item['node/%node/webform-results/download']['access callback'] = FALSE;
+    $item['node/%node/webform']['access callback'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_admin_menu_output_alter().
+ */
+function midwest_custom_admin_menu_output_alter(&$content) {
+  if (!user_access('menu access admin index item')) {
+    if (!empty($content['menu']['admin/index'])) {
+      unset($content['menu']['admin/index']);
+    }
+  }
+  if (user_access('administer content site configuration') && !user_access('administer site configuration')) {
+    if (!empty($content['menu']['admin/help'])) {
+      unset($content['menu']['admin/help']);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function midwest_custom_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+
+    case 'search_block_form':
+
+      $form['basic']['keys']['#attributes']['placeholder'] = 'Search';
+
+      $form['#attributes']['class'][] = 'form';
+      $form['#attributes']['class'][] = 'form-search';
+
+      $form['actions']['#prefix'] = '<div class="btn-wrap">';
+      $form['actions']['#suffix'] = '</div>';
+      break;
+    case 'user_login':
+      $form['actions']['#prefix'] = '<div class="btn-wrap">';
+      $form['actions']['#suffix'] = '</div>';
+      break;
+    case 'webform_client_form_' . CONTACT_WEBFORM:
+    case 'webform_client_form_' . CONTACT_EQUIP_WEBFORM:
+      $form['#attributes']['class'][] = 'form';
+      $form['#attributes']['class'][] = 'form-contact';
+      $form['#prefix'] = '<div class="content-item even">';
+      $form['#suffix'] = '</div>';
+      $form['actions']['#prefix'] = '<div class="btn-wrap">';
+      $form['actions']['#suffix'] = '</div>';
+      break;
+
+  }
+}

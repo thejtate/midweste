@@ -1,0 +1,60 @@
+.site-header {
+
+  .logo {
+    left: 180px !important;
+  }
+
+  .header-top {
+    height: 30px;
+
+    .form-search {
+      display: none;
+    }
+
+    .contacts {
+      display: none;
+    }
+  }
+
+  .header-bottom {
+
+    .btn-menu {
+      display: block;
+      position: absolute;
+      right: 75px;
+      top: 0;
+      outline: none;
+
+      a {
+        padding: 18px;
+        display: block;
+        color: #ffffff;
+        font-size: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+
+        &:before {
+          @include pseudo-block($top: 30px, $right: -20px);
+          @include oneline-sprite-box($icons, arrow-bottom-menu)
+        }
+      }
+    }
+
+    .nav {
+      z-index: 100;
+      right: 39px;
+      left: auto;
+      top: 63px;
+      background: #A82636;
+      display: none;
+
+      .menu {
+
+        li {
+          float: none;
+        }
+      }
+    }
+  }
+}

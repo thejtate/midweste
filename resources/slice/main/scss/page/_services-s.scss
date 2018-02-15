@@ -1,0 +1,41 @@
+.page-services {
+  min-width: 100% !important;
+
+  .outer-wrapper .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .outer-wrapper {
+
+    .middle-wrapper {
+      background: image-url('tmp/title-middle.jpg');
+      background-size: cover;
+      background-position: center;
+      .img {
+        display: none;
+      }
+    }
+  }
+
+  #carousel {
+    padding: 0;
+
+    ul.slides li {
+      width: 50% !important;
+
+      a {
+        font-size: 18px !important;
+        padding: 45px 10px !important;
+      }
+    }
+  }
+
+  #slider {
+    padding: 0 0 20px 0;
+
+    .flex-direction-nav {
+      display: none;
+    }
+  }
+}

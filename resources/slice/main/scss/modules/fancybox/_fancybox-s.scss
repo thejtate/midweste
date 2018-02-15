@@ -1,0 +1,14 @@
+.fancybox-overlay-fixed {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden;
+  left: 100% !important;
+}
+
+.fancybox-lock {
+  overflow: auto !important;
+}
+
+.fancybox-lock body {
+  overflow: auto !important;
+}

@@ -1,0 +1,30 @@
+.page-qualification {
+  min-width: 100%;
+
+  .outer-wrapper {
+
+    .inner {
+      width: 100% !important;
+
+    }
+  }
+
+  .content-wrapper {
+
+    .content-item {
+
+      h2 {
+        padding: 20px !important;
+      }
+
+      .cols {
+
+        .col {
+          float: none !important;
+          width: 100% !important;
+          padding: 0 20px !important;
+        }
+      }
+    }
+  }
+}

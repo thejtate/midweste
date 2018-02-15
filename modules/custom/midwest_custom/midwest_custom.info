@@ -1,0 +1,4 @@
+name = Midwest custom module
+description = Implement midwest custom functionality.
+core = 7.x
+package = custom

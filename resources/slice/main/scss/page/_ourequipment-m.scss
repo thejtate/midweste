@@ -1,0 +1,53 @@
+.page-ourequipment {
+  min-width: 100% !important;
+
+  .middle-wrapper {
+    background: image-url('tmp/title-top-ourequipment.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .img {
+      display: none;
+    }
+  }
+
+  .outer-wrapper .inner {
+    width: 100% !important;
+  }
+  .content-wrapper {
+
+    .content-item .inner {
+      width: 100% !important;
+
+      .sale-content {
+        text-align: center;
+
+        .item-sale {
+          float: none !important;
+          display: inline-block;
+          vertical-align: top;
+          margin-bottom: 20px;
+          text-align: left;
+
+          &:hover {
+            a {
+              @include transform(translateY(15px) !important);
+            }
+          }
+
+          a {
+            @include transform(translateY(15px) !important);
+          }
+        }
+      }
+    }
+    .content-item.even {
+      padding: 0 20px;
+
+      h2 {
+        padding: 10px 0 !important;
+        font-size: 30px;
+      }
+    }
+  }
+}

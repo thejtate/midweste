@@ -1,0 +1,30 @@
+.page-contact {
+  min-width: 100%;
+
+  .outer-wrapper .inner {
+    width: 100% !important;
+    padding: 0 20px;
+  }
+
+  .content-wrapper {
+
+    .content-item {
+      &.odd .cols .col {
+
+        &.col-1 {
+          padding-right: 30px !important;
+          width: 48%;
+        }
+
+        &.col-2 {
+          padding-left: 0px !important;
+          width: 52%;
+        }
+      }
+      .field-item .form-submit {
+        padding: 5px 60px !important;
+      }
+    }
+  }
+
+}

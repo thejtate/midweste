@@ -1,0 +1,22 @@
+.page-user {
+
+  .block-system {
+    text-align: center;
+    background: #e4e3e3;
+
+    .form-item {
+      margin: 0 0 20px 0;
+
+      label {
+        display: inline-block;
+        font-size: 18px;
+      }
+
+      input {
+        border: none;
+        padding: 5px 7px;
+        font-size: 18px;
+      }
+    }
+  }
+}

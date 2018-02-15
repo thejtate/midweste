@@ -1,0 +1,58 @@
+.page-gallery {
+
+  .gallery-list {
+
+    li {
+      width: 20%;
+
+      &:hover{
+
+        &:before {
+          opacity: 1;
+        }
+
+        .desc {
+          opacity: 1;
+        }
+      }
+
+      .desc {
+        padding: 30px;
+        font-size: 16px;
+
+        h6 {
+          font-size: 28px;
+          margin: 0 0 30px 0;
+        }
+
+        &:before {
+          bottom: -20px;
+        }
+      }
+
+      &:nth-child(5n) {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: 1500px) {
+
+      li {
+
+        .desc {
+          padding: 25px;
+          font-size: 14px;
+
+          h6 {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+          }
+
+          &:before {
+            bottom: -20px;
+          }
+        }
+      }
+    }
+  }
+}
